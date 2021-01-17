@@ -1015,6 +1015,7 @@ button {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
   .content__left-side {
+     margin: 0 auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1119,7 +1120,9 @@ button {
       .content__left-side .content__review .review__item {
         max-width: 370px;
         cursor: pointer;
-        margin-bottom: 30px; }
+        margin-bottom: 30px;
+
+    margin: 0 auto;}
         .content__left-side .content__review .review__item:hover .item__title {
           -webkit-transition: all 0.1s;
           transition: all 0.1s;
@@ -1330,6 +1333,17 @@ button {
         max-width: 75%; }
       .content__right-side .right-side__banner button.banner-button {
         margin-bottom: 40px; }
+
+@media screen and (max-width: 755px) {
+.content__left-side .content__news {
+   
+    justify-content: center;
+   }
+   
+   .content__left-side .content__news .news__item--small {
+      margin: 15px 0;
+   }
+}
 
 @media screen and (max-width: 375px) {
   .content__wrap {
