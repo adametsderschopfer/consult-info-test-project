@@ -1,0 +1,189 @@
+.preview {
+  max-height: 464px;
+  height: 100%;
+  overflow: hidden;
+
+  &__slider {
+    &-element {
+      background: url('https://i.redd.it/efgssj6edlg21.jpg') 100% 100% no-repeat;
+      background-color: rgba(0, 0, 0, 0.1);
+      background-size: cover;
+      background-position: center;
+      height: 464px;
+
+      outline: none;
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        content: "";
+
+        background: rgba(0, 0, 0, 0.1);
+
+        width: 100%;
+        height: 464px;
+
+        z-index: 10;
+      }
+    }
+  }
+
+  & .slider-element__container {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    color: $color-light;
+
+    position: relative;
+
+    z-index: 100;
+
+    & .preview__tag {
+      min-width: 50px;
+      text-transform: uppercase;
+      background: $color-primary;
+      padding: 5px 15px;
+      font-size: 16px;
+    }
+
+    & .preview__title {
+      width: 500px;
+      font-size: 72px;
+      text-align: center;
+      font-weight: 300;
+      line-height: 85px;
+      letter-spacing: 2px;
+    }
+
+    & .preview__description {
+      width: 450px;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+
+  .slick-arrow {
+    &.preview__arrow {
+      background: none;
+      border: none;
+
+      @include center("vertical");
+
+      color: $color-light;
+
+      cursor: pointer;
+
+      &.preview__arrow-left {
+        left: 150px;
+
+        &::after {
+          @include center("vertical");
+          content: "";
+          width: 65px;
+          height: 1px;
+          background: $color-light;
+          left: 110px;
+        }
+      }
+
+      &.preview__arrow-right {
+        right: 150px;
+
+        &::before {
+          @include center("vertical");
+          content: "";
+          width: 65px;
+          height: 1px;
+          background: $color-light;
+          right: 90px;
+        }
+      }
+    }
+
+    z-index: 10000;
+  }
+
+  .slick-dots {
+    display: none !important;
+    /*
+      Использовал important из-за большого веса со стороны либы slick
+      Так как при отключение в режиме desktop остается инлайн стиль dispaly: block;
+      что припятствует скрытию на десктопе
+    */
+
+    @include center("horizontal");
+    bottom: 22px;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+
+      width: 7px;
+      height: 7px;
+
+      margin: 0 8px;
+
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, 0.4);
+
+      &.slick-active {
+        background: $color-light;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-middle) {
+  .preview {
+    max-height: 320px;
+
+    &__slider {
+      &-element {
+        height: 320px;
+      }
+    }
+
+    button.preview__arrow-left.slick-arrow,
+    button.preview__arrow-right.slick-arrow {
+      display: none !important;
+      /*
+       Использовал important из-за большого веса со стороны либы slick
+       Так как при добавление кастомных кнопок добавляется в инлайн стили dispaly: block;
+       что припятствует скрытию на мобильных устройствах 
+      */
+    }
+
+    & .slick-dots {
+      /*
+         Использовал important из-за большого веса со стороны либы slick
+         так как для скрытия на десктопе так же использовался important
+      */
+      display: flex !important;
+    }
+
+    .slider-element__container {
+      & .preview__description {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      & .preview__title {
+        width: 268px;
+        font-size: 30px;
+        line-height: 150%;
+      }
+    }
+  }
+}

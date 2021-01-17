@@ -1,0 +1,26 @@
+// ------------------------------------------ //
+// GENERAL
+// ------------------------------------------ //
+@import "normalize.css/normalize";
+@import "mixins";
+@import "variables";
+@import "common";
+
+// ------------------------------------------ //
+// BLOCKS
+// ------------------------------------------ //
+@import "blocks/popup";
+@import "blocks/scroll-top";
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/title-page";
+@import "blocks/button-page";
+@import "blocks/navlinks";
+@import "blocks/preview";
+@import "blocks/content";
+
+
+// ------------------------------------------ //
+// VENDORS
+// ------------------------------------------ //
