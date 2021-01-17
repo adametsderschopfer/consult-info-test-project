@@ -1256,7 +1256,7 @@ button {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      background-image: url("/assets/images/balet.png");
+      background-image: url("./assets/images/balet.png");
       height: 175px;
       margin-top: 45px; }
       .content__left-side .content__banner .banner__text {
