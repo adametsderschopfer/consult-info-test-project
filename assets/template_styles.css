@@ -850,7 +850,7 @@ button {
     .preview__slider-element::after {
       position: absolute;
       left: 0;
-      top: 0;
+      bottom: 0;
       content: "";
       background: rgba(0, 0, 0, 0.1);
       width: 100%;
