@@ -1120,11 +1120,11 @@ button {
               justify-content: space-between; }
       .content__left-side .content__review .review__item {
         max-width: 370px;
-         margin-bottom: 25px;
+    margin: 0 auto;
         cursor: pointer;
         margin-bottom: 30px;
 
-    margin: 0 auto;}
+    }
         .content__left-side .content__review .review__item:hover .item__title {
           -webkit-transition: all 0.1s;
           transition: all 0.1s;
