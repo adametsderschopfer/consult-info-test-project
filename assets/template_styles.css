@@ -1025,6 +1025,7 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
     max-width: 770px;
+    padding: 10px;
     width: 100%; }
     .content__left-side .content__news {
       display: -webkit-box;
@@ -1267,6 +1268,7 @@ button {
         text-transform: uppercase;
         text-align: center; }
   .content__right-side {
+     margin: 0 auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
