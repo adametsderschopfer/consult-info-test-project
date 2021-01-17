@@ -981,7 +981,7 @@ button {
       display: -ms-flexbox !important;
       display: flex !important; }
     .preview .slider-element__container .preview__description {
-      width: 100%;
+      width: 90%;
       margin-bottom: 30px; }
     .preview .slider-element__container .preview__title {
       width: 268px;
