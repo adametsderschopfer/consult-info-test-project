@@ -841,6 +841,7 @@ button {
   height: 100%;
   overflow: hidden; }
   .preview__slider-element {
+     position:relative;
     background: url("https://i.redd.it/efgssj6edlg21.jpg") 100% 100% no-repeat;
     background-color: rgba(0, 0, 0, 0.1);
     background-size: cover;
